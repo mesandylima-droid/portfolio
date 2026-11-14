@@ -81,6 +81,22 @@ section{padding:88px 0 0}
 .p1{background:var(--orange)} .p2{background:var(--sun)} .p3{background:var(--mint)} .p4{background:var(--lilac)}
 @media (max-width:860px){.proj{grid-template-columns:1fr}.sec-head{flex-direction:column;align-items:start}}
 
+/* trajetória */
+.trail .about{align-items:start}
+.mq{overflow:hidden;margin-top:48px}
+.mtrack{display:flex;width:max-content}
+.mgroup{display:flex;gap:20px;padding-right:20px}
+.cov{display:block;width:320px;text-decoration:none}
+.cov img{display:block;width:320px;height:240px;object-fit:cover;border-radius:20px;background:var(--bg2)}
+.cov span{display:block;margin-top:10px;font-size:.95rem;color:var(--muted);line-height:1.4}
+.cov:hover span,.cov:focus-visible span{color:var(--sun)}
+@media (prefers-reduced-motion:no-preference){
+  .mtrack{animation:slow 120s linear infinite}
+  .mq:hover .mtrack,.mq:focus-within .mtrack{animation-play-state:paused}
+  @keyframes slow{to{transform:translateX(-50%)}}
+}
+@media (prefers-reduced-motion:reduce){.mq{overflow-x:auto}.mgroup[aria-hidden="true"]{display:none}}
+
 /* sobre */
 .about{display:grid;grid-template-columns:1.3fr 1fr;gap:56px}
 .about p{max-width:60ch;font-size:1.15rem}
@@ -196,6 +212,45 @@ footer{margin-top:64px;color:var(--muted);font-size:.95rem}
     </div>
   </section>
 
+  <section id="trajetoria" class="trail">
+    <div class="wrap">
+      <div class="sec-head"><h2>De redatora a Product Designer</h2></div>
+      <div class="about">
+        <div>
+          <p>Antes de ser Product Designer, fui redatora. Escrevi campanhas e conteúdo para marcas e veículos de comunicação, e parte desse trabalho está nas capas abaixo.</p>
+          <p>Foi escrevendo que aprendi a olhar para quem está do outro lado, entender o que essa pessoa precisa saber e dizer isso com clareza. Hoje uso esse olhar para decidir o que um produto deve mostrar e como, da pesquisa à interface.</p>
+        </div>
+        <div><a class="case" href="https://www.behance.net/sandylima" target="_blank" rel="noopener noreferrer">Ver todos no Behance</a></div>
+      </div>
+    </div>
+    <div class="mq" aria-label="Capas de projetos anteriores, com links para o Behance">
+      <div class="mtrack">
+        <div class="mgroup">
+          <a class="cov" href="https://www.behance.net/gallery/218216041/Meu-Mundinho-na-TV-e-no-Parque-TV-Jornal-Interior" target="_blank" rel="noopener noreferrer"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/9f7688218216041.Y3JvcCw2MzAsNDkzLDM5Nyw3Mw.png" alt="Meu Mundinho na TV e no Parque | TV Jornal Interior" loading="lazy" width="320" height="240"><span>Meu Mundinho na TV e no Parque | TV Jornal Interior</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/212203897/Festival-de-Inverno-TV-Jornal-Interior" target="_blank" rel="noopener noreferrer"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/571c5f212203897.Y3JvcCwxMDA2LDc4NywxOTYsMA.png" alt="Festival de Inverno | TV Jornal Interior" loading="lazy" width="320" height="240"><span>Festival de Inverno | TV Jornal Interior</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/133574119/social-media-diversos-2021" target="_blank" rel="noopener noreferrer"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/8898da133574119.Y3JvcCw4MDgsNjMyLDAsMA.jpg" alt="social media | diversos 2021" loading="lazy" width="320" height="240"><span>social media | diversos 2021</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/83412349/O-Maquinario-(KV)-Makital-EMP-2019" target="_blank" rel="noopener noreferrer"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/c1a5e883412349.Y3JvcCw1ODgsNDU5LDM4NCwxMDUz.png" alt="O Maquinário (KV) | Makital | EMP 2019" loading="lazy" width="320" height="240"><span>O Maquinário (KV) | Makital | EMP 2019</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/78138005/Afrontar-Sistema-Jornal-do-Commercio" target="_blank" rel="noopener noreferrer"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/3a5f4d78138005.Y3JvcCw1MTgsNDA1LDUzNCwxODg0.png" alt="Afrontar | Sistema Jornal do Commercio" loading="lazy" width="320" height="240"><span>Afrontar | Sistema Jornal do Commercio</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/76627913/O-Melhor-do-Churras-Hiper-Cordeiro" target="_blank" rel="noopener noreferrer"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/3dbbed76627913.Y3JvcCwxMDAzLDc4NSwxODgsODY.png" alt="O Melhor do Churras | Hiper Cordeiro" loading="lazy" width="320" height="240"><span>O Melhor do Churras | Hiper Cordeiro</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/74847191/Verao-de-Ofertas-Hiper-Cordeiro" target="_blank" rel="noopener noreferrer"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/98284474847191.Y3JvcCwxMTk2LDkzNSw3OSw3Nw.png" alt="Verão de Ofertas | Hiper Cordeiro" loading="lazy" width="320" height="240"><span>Verão de Ofertas | Hiper Cordeiro</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/75850825/Acervo-Cultural-Shopping-Difusora" target="_blank" rel="noopener noreferrer"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/fcb8f475850825.Y3JvcCw4NjYsNjc3LDYyLDQ1.png" alt="Acervo Cultural | Shopping Difusora" loading="lazy" width="320" height="240"><span>Acervo Cultural | Shopping Difusora</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/68541101/Festival-de-Inverno-de-Garanhuns-(FIG)-TV-Jornal" target="_blank" rel="noopener noreferrer"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/c1df3568541101.Y3JvcCw0NDg0LDM1MDcsMTg4LDA.png" alt="Festival de Inverno de Garanhuns (FIG) | TV Jornal" loading="lazy" width="320" height="240"><span>Festival de Inverno de Garanhuns (FIG) | TV Jornal</span></a>
+        </div>
+        <div class="mgroup" aria-hidden="true">
+          <a class="cov" href="https://www.behance.net/gallery/218216041/Meu-Mundinho-na-TV-e-no-Parque-TV-Jornal-Interior" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/9f7688218216041.Y3JvcCw2MzAsNDkzLDM5Nyw3Mw.png" alt="" loading="lazy" width="320" height="240"><span>Meu Mundinho na TV e no Parque | TV Jornal Interior</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/212203897/Festival-de-Inverno-TV-Jornal-Interior" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/571c5f212203897.Y3JvcCwxMDA2LDc4NywxOTYsMA.png" alt="" loading="lazy" width="320" height="240"><span>Festival de Inverno | TV Jornal Interior</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/133574119/social-media-diversos-2021" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/8898da133574119.Y3JvcCw4MDgsNjMyLDAsMA.jpg" alt="" loading="lazy" width="320" height="240"><span>social media | diversos 2021</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/83412349/O-Maquinario-(KV)-Makital-EMP-2019" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/c1a5e883412349.Y3JvcCw1ODgsNDU5LDM4NCwxMDUz.png" alt="" loading="lazy" width="320" height="240"><span>O Maquinário (KV) | Makital | EMP 2019</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/78138005/Afrontar-Sistema-Jornal-do-Commercio" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/3a5f4d78138005.Y3JvcCw1MTgsNDA1LDUzNCwxODg0.png" alt="" loading="lazy" width="320" height="240"><span>Afrontar | Sistema Jornal do Commercio</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/76627913/O-Melhor-do-Churras-Hiper-Cordeiro" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/3dbbed76627913.Y3JvcCwxMDAzLDc4NSwxODgsODY.png" alt="" loading="lazy" width="320" height="240"><span>O Melhor do Churras | Hiper Cordeiro</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/74847191/Verao-de-Ofertas-Hiper-Cordeiro" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/98284474847191.Y3JvcCwxMTk2LDkzNSw3OSw3Nw.png" alt="" loading="lazy" width="320" height="240"><span>Verão de Ofertas | Hiper Cordeiro</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/75850825/Acervo-Cultural-Shopping-Difusora" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/fcb8f475850825.Y3JvcCw4NjYsNjc3LDYyLDQ1.png" alt="" loading="lazy" width="320" height="240"><span>Acervo Cultural | Shopping Difusora</span></a>
+          <a class="cov" href="https://www.behance.net/gallery/68541101/Festival-de-Inverno-de-Garanhuns-(FIG)-TV-Jornal" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/c1df3568541101.Y3JvcCw0NDg0LDM1MDcsMTg4LDA.png" alt="" loading="lazy" width="320" height="240"><span>Festival de Inverno de Garanhuns (FIG) | TV Jornal</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="sobre">
     <div class="wrap">
       <div class="sec-head"><h2>Sobre mim</h2></div>
@@ -226,6 +281,7 @@ footer{margin-top:64px;color:var(--muted);font-size:.95rem}
     <div class="links">
       <a class="btn" href="mailto:mesandylima@gmail.com">Enviar e-mail</a>
       <a class="btn alt" href="https://www.linkedin.com/in/sandylima/" rel="noopener">LinkedIn</a>
+      <a class="btn alt" href="https://www.behance.net/sandylima" rel="noopener">Behance</a>
     </div>
     <footer>© 2026 Sandy Lima</footer>
   </div>
