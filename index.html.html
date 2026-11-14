@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandy Lima – Product Designer</title>
+<meta name="description" content="Portfólio de Sandy Lima, Product Designer em Belo Horizonte. Produtos SaaS e de assinatura, de ponta a ponta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b1340; --paper:#f6f3ff; --lilac:#d9ccff; --orange:#ff6b2c;
+  --mint:#3ddba4; --sun:#ffd23f; --white:#fff;
+  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:1.0625rem;line-height:1.6;color:var(--ink);background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.02em}
+
+/* topo */
+header{padding:20px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;text-decoration:none}
+nav{display:flex;gap:20px}
+nav a{text-decoration:none;font-weight:600;padding:6px 2px;border-bottom:3px solid transparent}
+nav a:hover{border-color:var(--orange)}
+
+/* hero */
+.hero{position:relative;padding:72px 0 104px;overflow:hidden}
+.hero h1{font-weight:800;font-size:clamp(2.3rem,6vw,4.6rem);max-width:17ch}
+.hero p{max-width:46ch;margin-top:28px;font-size:1.2rem}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:32px;padding:8px 16px;border-radius:999px;background:var(--white);font-weight:600}
+.status::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--mint)}
+.shapes{position:absolute;right:-40px;top:40px;width:420px;height:520px;pointer-events:none}
+.shapes i{position:absolute;display:block}
+.s1{width:230px;height:230px;border-radius:50%;background:var(--sun);right:90px;top:0}
+.s2{width:190px;height:190px;border-radius:44px;background:var(--mint);right:10px;top:200px;transform:rotate(14deg)}
+.s3{width:260px;height:130px;border-radius:130px 130px 0 0;background:var(--orange);right:140px;top:300px}
+.s4{width:120px;height:120px;border-radius:50%;background:var(--lilac);right:300px;top:170px}
+@media (prefers-reduced-motion:no-preference){
+  .s1{animation:float 7s ease-in-out infinite}
+  .s2{animation:float 9s ease-in-out infinite reverse}
+  @keyframes float{50%{translate:0 -14px}}
+}
+@media (max-width:860px){.shapes{opacity:.35;right:-120px}}
+
+/* seções */
+section{padding:72px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:36px}
+.sec-head h2{font-weight:800;font-size:clamp(2rem,4.5vw,3.2rem)}
+.sec-head p{max-width:34ch}
+
+/* projetos */
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.tile{display:flex;flex-direction:column;justify-content:space-between;min-height:320px;padding:28px;border-radius:28px;}
+.tile h3{font-weight:800;font-size:1.7rem;margin:14px 0 8px}
+.tile p{max-width:38ch}
+.tile .tags{display:flex;flex-wrap:wrap;gap:8px}
+.tile .tags span{padding:3px 12px;border-radius:999px;border:2px solid var(--ink);font-size:.9rem;font-weight:600}
+.tile strong{display:block;margin-top:18px;font-size:1.05rem}
+.t1{grid-column:span 4;background:var(--orange)}
+.t2{grid-column:span 2;background:var(--sun)}
+.t3{grid-column:span 2;background:var(--mint)}
+.t4{grid-column:span 4;background:var(--lilac)}
+@media (max-width:860px){.t1,.t2,.t3,.t4{grid-column:span 6;min-height:260px}.sec-head{flex-direction:column;align-items:start}}
+
+/* sobre */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+.about p+p{margin-top:16px}
+.about p{max-width:60ch}
+.box{background:var(--white);border-radius:28px;padding:28px}
+.box h3{font-size:1.3rem;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.chips li{padding:6px 14px;border-radius:999px;background:var(--lilac);font-weight:600}
+.box+.box{margin-top:20px}
+.jobs{list-style:none;padding:0}
+.jobs li{padding:10px 0;border-bottom:2px solid var(--paper)}
+.jobs li:last-child{border:0}
+.jobs b{display:block}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+/* contato */
+.contact{background:var(--ink);color:var(--white);border-radius:40px 40px 0 0;padding:88px 0 56px;margin-top:40px}
+.contact h2{font-weight:800;font-size:clamp(2.4rem,6vw,4.8rem);max-width:15ch}
+.contact p{margin-top:20px;max-width:46ch}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;background:var(--sun);color:var(--ink)}
+.btn.alt{background:transparent;color:var(--white);border:2px solid var(--white)}
+.btn:hover{background:var(--orange);color:var(--ink);border-color:var(--orange)}
+.contact .focus:focus-visible,.contact a:focus-visible{outline-color:var(--sun)}
+footer{margin-top:64px;font-size:.95rem;opacity:.8}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#topo">Sandy Lima</a>
+    <nav aria-label="Principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="hero">
+    <div class="shapes" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i></div>
+    <div class="wrap">
+      <h1>Conecto necessidades de usuários a objetivos de negócio.</h1>
+      <p>Sou Sandy Lima, Product Designer em Belo Horizonte. Atuo em produto SaaS e de assinatura de ponta a ponta: discovery e pesquisa com usuários, hipóteses e experimentos, UI, Design System e Design QA com Engenharia.</p>
+      <span class="status">Aberta a novos projetos e vagas</span>
+    </div>
+  </div>
+
+  <section id="projetos">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Projetos</h2>
+        <p>Destaques recentes e o resultado de cada um.</p>
+      </div>
+      <div class="grid">
+        <div class="tile t1">
+          <div>
+            <div class="tags"><span>Experimentos</span><span>UI</span><span>Conversão</span></div>
+            <h3>Redesenho da Bundle Page</h3>
+            <p>Redesenho da página de bundles de um produto de assinatura, com foco em levar mais pessoas ao checkout.</p>
+          </div>
+          <strong>+50% de intenção de compra, medida em cliques para o checkout.</strong>
+        </div>
+        <div class="tile t2">
+          <div>
+            <div class="tags"><span>Pesquisa</span><span>Retenção</span></div>
+            <h3>Fluxo de retenção no cancelamento</h3>
+            <p>Estudo aprofundado de churn, comparando usuários que cancelaram e usuários ativos, que originou o fluxo de retenção.</p>
+          </div>
+          <strong>Menor churn do ano após o lançamento: 112% da meta.</strong>
+        </div>
+        <div class="tile t3">
+          <div>
+            <div class="tags"><span>Entrevistas</span><span>Usabilidade</span></div>
+            <h3>Pesquisa com clientes dos EUA e da Europa</h3>
+            <p>Entrevistas e testes de usabilidade conduzidos em inglês.</p>
+          </div>
+        </div>
+        <div class="tile t4">
+          <div>
+            <div class="tags"><span>Claude Code</span><span>Agentes de IA</span><span>Handoff</span></div>
+            <h3>Prototipagem com IA</h3>
+            <p>Protótipos feitos com Claude Code e agentes de IA para validar ideias mais rápido e melhorar o handoff com Engenharia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap">
+      <div class="sec-head"><h2>Sobre mim</h2></div>
+      <div class="about">
+        <div>
+          <p>Product Designer atuando em produto SaaS e de assinatura de ponta a ponta: discovery e pesquisa com usuários, hipóteses e experimentos, UI, Design System e Design QA com Engenharia.</p>
+          <p>Conecto necessidades de usuários a objetivos de negócio como conversão, retenção e engajamento. Trabalho junto com Produto, Engenharia e Dados para decidir o que construir, não só como deve ser a interface.</p>
+        </div>
+        <div>
+          <div class="box">
+            <h3>Ferramentas</h3>
+            <ul class="chips">
+              <li>Figma</li><li>Design Systems</li><li>Claude Code</li>
+              <li>Clarity</li><li>Hotjar</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Formação e idiomas</h3>
+            <ul class="jobs">
+              <li><b>Design, UFMG</b>Cursando</li>
+              <li><b>Inglês</b>Fluente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="contact" id="contato">
+  <div class="wrap">
+    <h2>Vamos trabalhar juntos?</h2>
+    <p>Me conte sobre o seu projeto ou a vaga. Respondo em até dois dias úteis.</p>
+    <div class="btns">
+      <a class="btn" href="mailto:mesandylima@gmail.com">Enviar e-mail</a>
+      <a class="btn alt" href="https://www.linkedin.com/in/sandylima/" rel="noopener">LinkedIn</a>
+    </div>
+    <footer>© 2026 Sandy Lima</footer>
+  </div>
+</div>
+
+</body>
+</html>
