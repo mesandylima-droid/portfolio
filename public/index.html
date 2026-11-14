@@ -41,6 +41,17 @@ nav a:hover{color:var(--text);border-color:var(--orange)}
 .status{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:8px 16px;border-radius:999px;background:var(--bg2);font-weight:600}
 .status::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--mint)}
 
+.pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.pills .status{margin-top:0}
+.edu{position:relative;display:inline-flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-radius:999px;background:var(--bg2);font-weight:600}
+.tipbtn{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--lilac);background:transparent;color:var(--lilac);font:600 .9rem var(--body);line-height:1;cursor:pointer}
+.tipbtn:hover{background:var(--lilac);color:var(--ink)}
+.tip{display:none;position:absolute;left:0;top:100%;z-index:5;width:min(330px,calc(100vw - 48px));padding-top:10px}
+.tipbox{display:block;padding:14px 16px;border-radius:16px;background:#2a2152;border:1px solid #3a2f68;font-size:.95rem;font-weight:400;line-height:1.5}
+.tipbox a{display:inline-block;margin-top:6px;color:var(--sun);font-weight:600}
+.tipwrap.open .tip{display:block}
+@media (hover:hover){.tipwrap:hover .tip{display:block}}
+
 /* faixa de habilidades */
 .strip{overflow:hidden;border-block:1px solid #2c2450;padding:18px 0;margin-top:56px}
 .track{display:flex;width:max-content}
@@ -115,7 +126,15 @@ footer{margin-top:64px;color:var(--muted);font-size:.95rem}
     <div class="wrap">
       <h1>Conecto <i class="sh s1" aria-hidden="true"></i> necessidades de usuários <i class="sh s2" aria-hidden="true"></i> a objetivos <i class="sh s3" aria-hidden="true"></i> de negócio.</h1>
       <p class="intro">Sou Sandy Lima, <strong>Product Designer</strong> em Belo Horizonte. Atuo em <strong>produto SaaS e de assinatura</strong> de ponta a ponta: discovery e pesquisa com usuários, hipóteses e experimentos, UI, <strong>Design System</strong> e Design QA com Engenharia.</p>
-      <span class="status">Aberta a novos projetos e vagas</span>
+      <div class="pills">
+        <span class="status">Aberta a novos projetos e vagas</span>
+        <span class="edu">Estudante de Design na UFMG
+          <span class="tipwrap">
+            <button class="tipbtn" type="button" aria-expanded="false" aria-describedby="tip-ufmg" aria-label="Sobre a UFMG">i</button>
+            <span class="tip" id="tip-ufmg" role="tooltip"><span class="tipbox">A UFMG foi classificada como a melhor universidade federal do Brasil, e a 3ª no geral, no Ranking Universitário Folha (RUF) 2026. <a href="https://www.em.com.br/gerais/2026/10/7524340-ufmg-conquista-o-posto-de-melhor-universidade-federal-do-brasil-em-ranking.html" target="_blank" rel="noopener noreferrer">Ver reportagem</a></span></span>
+          </span>
+        </span>
+      </div>
     </div>
     <div class="strip" aria-label="Áreas e ferramentas">
       <div class="track">
@@ -212,5 +231,17 @@ footer{margin-top:64px;color:var(--muted);font-size:.95rem}
   </div>
 </div>
 
+<script>
+(function(){
+  var wraps=document.querySelectorAll('.tipwrap');
+  function closeAll(except){wraps.forEach(function(w){if(w!==except){w.classList.remove('open');w.querySelector('.tipbtn').setAttribute('aria-expanded','false');}});}
+  wraps.forEach(function(w){
+    var b=w.querySelector('.tipbtn');
+    b.addEventListener('click',function(e){e.stopPropagation();closeAll(w);var o=w.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+  });
+  document.addEventListener('click',function(e){if(!e.target.closest('.tipwrap'))closeAll();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll();});
+})();
+</script>
 </body>
 </html>
